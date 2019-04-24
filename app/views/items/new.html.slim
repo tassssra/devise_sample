@@ -1,0 +1,5 @@
+= form_for @item, method: :post do |f|
+  h1 ご購入の商品情報を入力
+  p 商品名: #{f.text_field :name}
+  p 値段: #{f.text_field :price}
+  input type="submit" value="送信"

@@ -1,0 +1,6 @@
+h1 購入商品一覧
+- if user_signed_in?
+  - @items.each do |item|
+    p = item.name : = item.price
+- else
+  p ログインしてください
