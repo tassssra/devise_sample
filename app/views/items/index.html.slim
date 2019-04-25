@@ -1,6 +1,13 @@
-h1 購入商品一覧
+h1
+  | 購入商品一覧
 - if user_signed_in?
   - @items.each do |item|
-    p = item.name : = item.price
+    p
+      = item.name
+      | :
+      = item.price
+      | :
+      = item.user.nickname.present? ? "購入者 #{item.user.nickname}" : "会員No.#{item.user.id}"
 - else
-  p ログインしてください
+  p
+    | ログインしてください
